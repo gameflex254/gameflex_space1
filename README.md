@@ -775,3 +775,19 @@ cd <repository-name>
 npm i
 npm run dev
 ```
+
+### Production deployment
+
+The production server listens on `PORT` (default `8080`) and starts with:
+
+```sh
+bun run build
+npm run start
+```
+
+Docker and Nixpacks use the same Nitro Node entrypoint. Inject production
+variables through the hosting platform; do not commit `.env` files or secrets.
+`.env.example` contains the safe configuration template.
+
+Rotate any Supabase service-role or R2 access credentials that were previously
+stored in a local `.env` before deploying this revision.

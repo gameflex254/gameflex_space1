@@ -1,0 +1,15 @@
+.env
+.env.*
+!.env.example
+.git
+.gitignore
+.dockerignore
+node_modules
+dist
+dist-ssr
+.output
+.vinxi
+.tanstack
+.nitro
+.wrangler
+*.log

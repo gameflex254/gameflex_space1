@@ -8,9 +8,9 @@ cmds = ["bun install --frozen-lockfile"]
 cmds = ["bun run build"]
 
 [start]
-cmd = "node dist/server/index.mjs"
+cmd = "HOST=0.0.0.0 PORT=${PORT:-3000} node dist/server/index.mjs"
 
 [variables]
 NODE_ENV = "production"
 HOST = "0.0.0.0"
-PORT = "8080"
+PORT = "3000"
